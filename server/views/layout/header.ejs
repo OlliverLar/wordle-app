@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../public/css/output.css" />
+    <title>Wordle Clone</title>
+  </head>
+  <body>
+    <header class="w-screen bg-slate-800 h-20">
+      <nav class="h-20 flex justify-evenly items-center">
+        <% menu.forEach(function(a) { %>
+        <li class="list-none">
+          <a
+            class="text-white text-2xl <% if (a.active) { %> underline <% } %>"
+            href="<%= a.link %>"
+          >
+            <%= a.label %>
+          </a>
+        </li>
+        <% }); %>
+      </nav>
+    </header>
+  </body>
+</html>

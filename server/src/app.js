@@ -10,5 +10,8 @@ app.use("/public", express.static(resolve("public")));
 app.use(express.json());
 app.use("/", gameRoute);
 app.use("/api", apiRoute);
+app.get("*", (req, res) => {
+  res.send("404 page not found");
+});
 
 export default app;

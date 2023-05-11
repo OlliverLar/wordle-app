@@ -1,10 +1,9 @@
 import { Router } from "express";
-import words from "../getwords.js";
+import randomWord from "../getwords.js";
 
 const router = Router();
 
-router.get("/words", async (req, res) => {
-  res.json(words);
+router.get("/word", async (req, res) => {
+  res.json(randomWord);
 });
-
 export default router;
